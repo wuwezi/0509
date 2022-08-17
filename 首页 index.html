@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五味子</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: beige;
+      }
+      /* *{
+            border: 3px solid blue;
+        }*/
+      .yinying {
+        box-shadow: 2px 2px 3px #aaaaaa;
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid grey;
+        font-size: 14px;
+        color: rgb(210, 43, 17);
+      }
+      /*当屏幕宽度小于600px时要改变的css*/
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJuQu {
+          flex-direction: column;
+        }
+        .youQu {
+          margin-left: 8px;
+        }
+        .shuJu {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 2" class="ceBian baise yinying">
+      <!--头像栏-->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          background-color: antiquewhite;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img
+          src="https://s3.328888.xyz/2022/08/16/hCJ3S.jpg"
+          width="40px"
+          height="40px"
+          alt="宝宝"
+        />
+        <div style="margin-left: 10px">五味子1</div>
+      </div>
+      <!--导航栏-->
+      <div
+        style="background-color: aliceblue; text-align: center"
+        class="flex1"
+      >
+        <div class="daohang">
+          <a href="https://hao.360.com/?y1018">首页</a>
+        </div>
+        <div class="daohang">
+          <a href="https://hao.360.com/?y1018">导航1</a>
+        </div>
+        <div class="daohang">
+          <a href="https://hao.360.com/?y1018">导航1</a>
+        </div>
+        <div class="daohang">
+          <a href="https://hao.360.com/?y1018">导航1</a>
+        </div>
+        <div class="daohang">
+          <a href="https://hao.360.com/?y1018">导航1</a>
+        </div>
+      </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+      <!--头部栏-->
+      <div
+        style="
+          height: 150px;
+          z-index: 1;
+          background-color: antiquewhite;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          padding: 1px;
+        "
+        class="baise yinying flex"
+      >
+        <img
+          src="https://s3.328888.xyz/2022/08/16/hCJ3S.jpg"
+          width="100px"
+          height="100px"
+          alt="宝宝"
+        />
+        <div style="margin-left: 30px; font-size: 80px">五味子</div>
+      </div>
+      <!--内容区-->
+      <div style="overflow: auto" class="neiRong flex1 flex">
+        <!--左区-->
+        <div style="flex: 3" class="flex column mg8">
+          <!--数据区-->
+          <div class="flex shuJuQu">
+            <!--数据块-->
+            <div
+              style="height: 100px; background-color: cyan; text-align: center"
+              class="shuJu flex1 mgr8 yinying"
+            >
+              <!--数据块1-->
+              <div
+                style="height: 75px; align-items: center; margin: 1px"
+                class="flex column mg8 baise"
+              ></div>
+              <div style="font-size: 20px">数据1</div>
+            </div>
+
+            <div
+              style="height: 100px; background-color: cyan; text-align: center"
+              class="shuJu flex1 baise mgr8 yinying"
+            >
+              <div
+                style="height: 75px; align-items: center; margin: 1px"
+                class="flex column mg8 baise"
+              ></div>
+              <div style="font-size: 20px">数据2</div>
+            </div>
+
+            <div
+              style="height: 100px; background-color: cyan; text-align: center"
+              class="shuJu flex1 baise mgr8 yinying"
+            >
+              <div
+                style="height: 75px; align-items: center; margin: 1px"
+                class="flex column mg8 baise"
+              ></div>
+              <div style="font-size: 20px">数据3</div>
+            </div>
+
+            <div
+              style="height: 100px; background-color: cyan; text-align: center"
+              class="shuJu flex1 baise  yinying"
+            >
+              <div
+                style="height: 75px; align-items: center; margin: 1px"
+                class="flex column mg8 baise"
+              ></div>
+              <div style="font-size: 20px">数据4</div>
+            </div>
+          </div>
+          <!--列表区-->
+          <div class="flex column">
+            <!--列表项-->
+            <div style="height: 50px" class="baise mgt8 yinying"></div>
+            <div style="height: 300px" class="baise mgt8 yinying"></div>
+            <div style="height: 120px" class="baise mgt8 yinying"></div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="youQu flex column mgr8">
+          <!--提示区-->
+          <div style="height: 150px" class="baise yinying"></div>
+          <!--消息区-->
+          <div style="height: 300px" class="baise mgt8 yinying"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
