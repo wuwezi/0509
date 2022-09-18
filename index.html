@@ -1,160 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>布局</title>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五味子</title>
     <style>
-        body{
-            margin: 0;
-            height: 100vh;
-            background-color: beige;
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(242, 246, 246);
+      }
+      * {
+        border: px solid black;
+      }
+      .flex {
+        display: flex;
+      }
+      /*当屏幕宽度小于600px时要改变的css*/
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
         }
-        /* *{
-            border: 3px solid blue;
-        }*/
-        .yinying{
-            box-shadow: 2px 2px 3px #aaaaaa;;
+        .neiRong {
+          flex-direction: column;
         }
-        .flex{
-            display: flex;
+        .shuJuQu {
+          flex-direction: column;
         }
-        .baise{
-            background-color: white;
+        .youQu {
+          margin-left: 8px;
         }
-        .flex1{
-            flex:1;
+        .shuJu {
+          margin: 0 0 8px;
+          flex: auto;
         }
-        .column{
-            flex-direction: column;
-        }
-        .mg8{
-            margin: 8px;
-        }
-        .mgr8{
-            margin-right: 8px;
-        }
-        .mgt8{
-            margin-top: 8px;
-        }
-        .daohang{
-            padding: 10px 20px;
-            border-bottom: 1px solid grey;
-            font-size: 14px;
-            color:rgb(210, 43, 17)
-        }
-        /*当屏幕宽度小于600px时要改变的css*/
-        @media (max-width: 600px){
-            .ceBian {
-                display: none;
-            }
-            .neiRong{
-                flex-direction: column;
-            }
-            .shuJuQu{
-                flex-direction: column;
-            }
-            .youQu{
-               margin-left: 8px;
-            }
-            .shuJu{
-                margin: 0 0 8px;
-                flex:auto;
-            }
-        }
-        .neiRong::-webkit-scrollbar{
-            display: none;
-        }
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none;
+      }
     </style>
-</head>
-<body class="flex">
-    <!--侧边栏-->
-    <div style="width: 200px;z-index: 2;" class="ceBian baise yinying ">
-    <!--头像栏-->
-    <div style="
-    padding: 10px; 
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
-    border-bottom: 1px solid #999;"
-    class="flex">
-        <img src="https://s3.328888.xyz/2022/08/16/hCJ3S.jpg"
-        width="40px" height="40px" alt="宝宝"> 
-        <div style="margin-left:10px ;">五味子1</div>
-    </div>
-      <!--导航栏-->
-      <div style="background-color:aliceblue;
-      text-align:center;" 
-      class="flex1">
-        <div class="daohang">
-            <a href="https://hao.360.com/?y1018">首页</a></div>
-        <div class="daohang">
-            <a href="https://hao.360.com/?y1018">导航1</a></div>
-        <div class="daohang">
-            <a href="https://hao.360.com/?y1018">导航1</a></div>
-        <div class="daohang">
-            <a href="https://hao.360.com/?y1018">导航1</a></div>
-        <div class="daohang">
-            <a href="https://hao.360.com/?y1018">导航1</a></div>
-      </div>
-    </div>
-     <!--主区域-->
-     <div class="flex1 flex column">
-        <!--头部栏-->
-        <div style="height: 150px;z-index: 1;
-        background-color: antiquewhite;
+  </head>
+  <body>
+    <div
+      class="flex"
+      style="
+        background-color: rgb(230, 222, 224);
         text-align: center;
-        justify-content: center;
+        padding: 0px;
         align-items: center;
-        padding: 1px;" 
-        class="baise yinying flex">
-        <img src="https://s3.328888.xyz/2022/08/16/hCJ3S.jpg"
-        width="100px" height="100px" alt="宝宝"> 
-        <div style="margin-left:30px ;font-size: 80px;">五味子</div>
-    </div>
-        <!--内容区-->
-        <div style="overflow: auto;" class="neiRong flex1 flex">
-            <!--左区-->
-            <div  style="flex: 3;" class="flex column mg8" >
-             <!--数据区-->
-            <div class="flex shuJuQu">
-            
-                <!--数据块-->
-            <div style="height: 100px;
-                background-color: cyan;
-                text-align: center;" 
-            class="shuJu flex1 mgr8 yinying ">
-            <!--数据块1-->
-            <div 
-            style="height: 75px;align-items: center;
-            margin:1px;" 
-            class=" flex column mg8  baise"><img src="https://s3.328888.xyz/2022/08/16/hCJ3S.jpg"
-            width="auto" height="75px" alt="宝宝"> </div>
-            <div style="font-size: 20px;">数据</div>
-        </div>
-            
-        <div style="height: 100px;" class="shuJu flex1 baise mgr8 yinying "></div>
-            <div style="height: 100px;" class="shuJu flex1 baise mgr8 yinying "></div>
-            <div style="height: 100px;" class="shuJu flex1 baise mgr8 yinying "></div>
-        </div>
-        <!--列表区-->
-        <div class="flex column">
-            <!--列表项-->
-            <div style="height: 120px;" class="baise mgt8 yinying "></div>
-            <div style="height: 200px;" class="baise mgt8 yinying "></div>
-            <div style="height: 120px;" class="baise mgt8 yinying "></div>
-            <div style="height: 60px;" class="baise mgt8 yinying "></div>
-        </div>
-    </div>
-            <!--右区-->
-            <div style="flex:1;" class="youQu flex column mgr8 ">
-            <!--提示区-->
-        <div style="height: 150px;" class="baise yinying "></div>
-         <!--消息区-->
-        <div style="height: 300px;" class="baise mgt8 yinying "></div>
-        </div>
+        justify-content: center;
+      "
+    >
+      <img
+        src="https://s1.328888.xyz/2022/08/16/hCtP5.jpg"
+        ait="nana"
+        style="border-radius: 50%"
+        width="150"
+        height="150"
+      />
+      <div
+        style="
+          font-size: 100px;
+          font-family: 'Comis Sans MS', cursive, sans-serif;
+          font-weight: bold;
+          padding: 0px;
+          margin: 50px;
+          letter-spacing: 30px;
+        "
+      >
+        五味子
       </div>
-    </div>    
+    </div>
+    <div
+      style="
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 5px;
+        line-height: 1.7;
+        font-size: 17px;
+      "
+    >
+      <h1 style="text-align: center; font-size: 50px">视界</h1>
+      <pre
+        style="font-size: 25px"
+      ><p><b>我眼中的视界：</b><br>    未来世界属于智能时代，人有多懒，智能就有多发达。<br></p></pre>
+      <p>
+        <a
+          href="https://baike.so.com/doc/5217958-7569446.html"
+          style="text-decoration: none"
+          >智能机器人</a
+        >我所理解的智能：何为智能？是自己有判断力，处理能力，而不是靠你写了多少程序，
+        它能处理多少事。而是你给它所需要的基本参数，
+        通过一系列的传感器将数据传给处理器，处理器经过处理后使机器人自我成长
+      </p>
+      <hr />
+      <p>
+        <a
+          href="https://baike.so.com/doc/5327834-5563006.html"
+          style="text-decoration: none"
+          >物联网</a
+        >物联网简单来说就是用各种模块传感器连接万物，通过
+        互联网更加便捷的管理我们所需要操控的设备及数据。
+      </p>
+      <hr />
+      <p>
+        基于以上两个核心,所需要学的是了解各种模块<a
+          href="https://baike.baidu.com/item/%E4%BC%A0%E6%84%9F%E5%99%A8/26757?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          传感器</a
+        >的原理及作用。
+        <a
+          href="https://baike.baidu.com/item/%E4%BC%BA%E6%9C%8D%E7%B3%BB%E7%BB%9F/2387700"
+          style="text-decoration: none"
+        >
+          伺服系统</a
+        >与<a
+          href="https://baike.baidu.com/item/%E8%88%B5%E6%9C%BA?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          舵机</a
+        >它是使 物体能够精确移动必不可少的。<a
+          href="https://baike.baidu.com/item/3D%E6%89%93%E5%8D%B0/9640636?fromModule=lemma-qiyi_sense-lemma"
+          style="text-decoration: none"
+        >
+          3D建模、打印</a
+        >: 低成本 去设计制造出想要的零部件。<a
+          href="https://baike.baidu.com/item/%E7%A8%8B%E5%BA%8F/71525?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          程序</a
+        >：更直观的显示出设备的状态，以及对设备的操控。
+      </p>
+      <hr />
+      <p>
+        需要了解的是电能这些能源的<a
+          href="https://baike.baidu.com/item/%E7%BB%AD%E8%88%AA%E8%83%BD%E5%8A%9B?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          续航能力</a
+        >，数据传输<a
+          href="https://baike.baidu.com/item/%E6%8A%97%E5%B9%B2%E6%89%B0?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          抗干扰</a
+        >的问题，所使用的模块及各配件的生产厂家，以及最重要的信号传输问题。
+        某新能源汽车CEO的<a
+          href="https://baike.baidu.com/item/%E6%98%9F%E9%93%BE%E8%AE%A1%E5%88%92?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          星链计划</a
+        >可能不单单是为了争夺卫星互联网市场,更可能的是
+        争夺未来的智能时代,所以找到新的信号传输方式及抗干扰尤为必要。
+      </p>
+      <hr />
+      <p>
+        学无止境，学的同时更多的是要懂得钻研，钻研<a
+          href="https://baike.baidu.com/item/%E5%88%9B%E6%96%B0/6047?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          创新</a
+        >才是发展新方向，可能他们都是对的，但你有疑问就要去尝试、实验进行解决，学不
+        会复杂的就要学会借鉴以创造一套自己的体系，简单实用，切勿<a
+          href="https://baike.baidu.com/item/%E5%8D%8E%E8%80%8C%E4%B8%8D%E5%AE%9E/822090?fromModule=lemma_search-box"
+          style="text-decoration: none"
+        >
+          华而不实</a
+        >。
+      </p>
+      <hr />
+      <hr />
+      <input
+        style="color: red; text-align: center"
+        value="注：未经许可禁止转载！"
+      />
+    </div>
+    <div
+      style="
+        background-color: rgb(230, 222, 224);
+        text-align: center;
+        padding: 20px;
+      "
+    >
+      <p>我的网站</p>
+      <a
+        href="https://www.so.com/s?ie=utf-8&src=hao_360so_history_b_cube&shb=1&hsid=53401ffc1c10b86d&ssid=&q=%E6%8C%81%E7%BB%AD%E4%BC%98%E5%8C%96%E4%B8%AD"
+        >友情链接</a
+      >
+    </div>
   </body>
 </html>
